@@ -1,0 +1,20 @@
+# add mapping
+
+## code
+````
+PUT /my-index-000001
+{
+  "mappings": {
+    "properties": {
+      "age":    { "type": "integer" },  
+      "email":  { "type": "keyword"  }, 
+      "name":   { "type": "text"  }     
+    }
+  }
+}
+````
+
+## output
+````
+.
+````
