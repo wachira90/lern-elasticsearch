@@ -2,6 +2,15 @@
 
 test on version 7.14.1 windows
 
+## add system variable
+
+````
+CLASSPATH => C:\Program Files\Java\jdk1.8.0_251\jre\lib
+JAVA_HOME => C:\Program Files\Java\jdk1.8.0_251
+ES_JAVA_HOME => C:\Program Files\Java\jdk1.8.0_251
+ES_PATH_CONF => D:\elk\elasticsearch-7.14.1\config
+````
+
 ## add in file `elasticsearch.yml`
 
 ````
