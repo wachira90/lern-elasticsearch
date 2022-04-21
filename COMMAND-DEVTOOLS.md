@@ -130,4 +130,46 @@ Content-Type: application/json
 }
 ````
 
+create schema
+
+````
+PUT my-index-000001
+{
+  "mappings": {
+    "properties": {
+      "full_text": { "type": "text" }
+    }
+  }
+}
+
+
+PUT my-index-000001/_doc/1
+{
+  "full_text":   "Quick Brown Foxes!"
+}
+
+
+GET my-index-000001/_search?pretty
+{
+  "query": {
+    "term": {
+      "full_text": "Quick Brown Foxes!"
+    }
+  }
+}
+
+
+
+GET my-index-000001/_search?pretty
+{
+  "query": {
+    "match": {
+      "full_text": "Quick Brown Foxes!"
+    }
+  }
+}
+
+````
+
+
 MORE INFO : https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-match-query.html
