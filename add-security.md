@@ -61,3 +61,34 @@ PASSWORD remote_monitoring_user = WQNeiu1d7SVP8uXTRD6q
 Changed password for user elastic
 PASSWORD elastic = r13IrHd29XPX6GkW7hNZ
 ````
+
+
+## HTTP
+````
+GET http://localhost:9200/mymap/_search
+Content-Type: application/json; charset=utf-8
+Authorization: Basic ZWxhc3RpYzpyMTNJckhkMjlYUFg2R2tXN2hOWg==
+
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+
+GET http://localhost:9200/_security/user/elastic
+Content-Type: application/json; charset=utf-8
+Authorization: Basic ZWxhc3RpYzpyMTNJckhkMjlYUFg2R2tXN2hOWg==
+
+
+curl --user elastic:r13IrHd29XPX6GkW7hNZ -XGET "http://localhost:9200/mymap/_search"
+
+
+````
+base64(USERNAME:PASSWORD)
+
+BASE64 : https://www.base64encode.org/
+
+
+
+
