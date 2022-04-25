@@ -1,7 +1,6 @@
 # multi get index
 
 
-
 ````
 GET /_mget
 {
@@ -18,14 +17,19 @@ GET /_mget
 }
 ````
 
-## Request
+
+## request
+
+
 ````
 GET /_mget
 
 GET /<index>/_mget
 ````
 
+
 ## example
+
 
 ````
 # GET MULTI WITH INDEX
@@ -57,3 +61,35 @@ GET _mget/
   ]
 }
 ````
+
+
+## filter
+
+
+````
+GET /_mget
+{
+  "docs": [
+    {
+      "_index": "test",
+      "_id": "1",
+      "_source": false
+    },
+    {
+      "_index": "test",
+      "_id": "2",
+      "_source": [ "field3", "field4" ]
+    },
+    {
+      "_index": "test",
+      "_id": "3",
+      "_source": {
+        "include": [ "user" ],
+        "exclude": [ "user.location" ]
+      }
+    }
+  ]
+}
+````
+
+
