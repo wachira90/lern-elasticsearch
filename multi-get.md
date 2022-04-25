@@ -24,3 +24,36 @@ GET /_mget
 
 GET /<index>/_mget
 ````
+
+## example
+
+````
+# GET MULTI WITH INDEX
+GET user/_mget
+{
+  "docs": [
+    {
+      "_id": "3"
+    },
+    {
+      "_id": "2"
+    }
+  ]
+}
+
+
+# GET MULTI 
+GET _mget/
+{
+  "docs": [
+    {
+      "_index": "user",
+      "_id": "3"
+    },
+    {
+      "_index": "user",
+      "_id": "2"
+    }
+  ]
+}
+````
