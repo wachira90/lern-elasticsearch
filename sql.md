@@ -18,7 +18,7 @@ POST _sql?format=csv
 }
 
 #
-POST _sql?format=csv
+POST _sql?format=txt
 {
   "query": """
   SELECT * FROM "user"
