@@ -89,6 +89,14 @@ base64(USERNAME:PASSWORD)
 
 BASE64 : https://www.base64encode.org/
 
+## another methode
 
+```
+bin/elasticsearch-setup-passwords auto | interactive
 
+- auto
+Outputs randomly-generated passwords to the console.
 
+- interactive
+Prompts you to manually enter passwords.
+```
